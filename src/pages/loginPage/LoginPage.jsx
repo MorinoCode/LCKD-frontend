@@ -1,10 +1,14 @@
 import "./LoginPage.css";
-import logo from '../../assets/pictures/Logo.svg'
+import logo from "../../assets/pictures/Logo.svg";
+import { Link } from "react-router-dom";
+
 export default function LoginPage() {
   return (
     <div className="loginPage">
       <div className="signUp">
-        <button className="signupBtn">Sign up</button>
+        <Link to="/signup" className="signupBtn">
+          Sign up
+        </Link>
       </div>
 
       <div className="logoSection">

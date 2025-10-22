@@ -15,6 +15,9 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  a {
+    text-decoration: none;
+  }
 }
 
 .signupBtn {
@@ -51,18 +54,16 @@
   width: 80%;
   max-width: 300px;
   gap: 0.8rem;
-  
 }
 
 .loginForm label {
   font-size: 0.8rem;
   color: black;
-  background-color:#ffcc00 ;
+  background-color: #ffcc00;
   width: 6rem;
   font-weight: bold;
   text-align: center;
   border-radius: 4px 4px 0 0;
-  
 }
 
 .loginForm input {
