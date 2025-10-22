@@ -1,0 +1,105 @@
+.signupPage {
+  background-color: #15085f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem;
+}
+
+/* Log in button at top right */
+.loginLink {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  a {
+    text-decoration: none;
+  }
+}
+
+.loginBtnTop {
+  background: transparent;
+  border: 1px solid #ff6f00;
+  color: #ff6f00;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  
+}
+
+.logoSection {
+  text-align: center;
+}
+
+.logoSection h1 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.logoSection p {
+  color: #ffcc00;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Form styling */
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 300px;
+  gap: 0.8rem;
+}
+
+.signupForm label {
+  font-size: 0.8rem;
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.signupForm input {
+  background: transparent;
+  border: 1px solid #ffcc00;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 3px;
+  outline: none;
+}
+
+.passwordBox {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffcc00;
+  border-radius: 3px;
+}
+
+.passwordBox input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.eyeIcon {
+  padding: 0 0.5rem;
+  color: #ffcc00;
+  cursor: pointer;
+}
+
+.signupBtnMain {
+  background-color: #fff;
+  color: #15085f;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 0;
+  cursor: pointer;
+  margin-top: 1rem;
+}
