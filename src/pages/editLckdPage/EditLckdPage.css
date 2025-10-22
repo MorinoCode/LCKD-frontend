@@ -1,0 +1,118 @@
+.editLckdPage {
+  background-color: #15085f;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem;
+}
+
+/* Logo */
+.topLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: flex-start;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+.logoText {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Title */
+.titleSection {
+  margin-top: 2rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.titleSection h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+/* Form */
+.editLckdForm {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 320px;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.editLckdForm label {
+  font-size: 0.8rem;
+  color: #ffcc00;
+  font-weight: bold;
+  margin-bottom: -0.3rem;
+}
+
+.inputField {
+  background: transparent;
+  border: 1px solid #ffcc00;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 3px;
+  outline: none;
+}
+
+.passwordBox {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffcc00;
+  border-radius: 3px;
+}
+
+.passwordInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.refreshBtn {
+  background: none;
+  border: none;
+  color: #ffcc00;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding-right: 0.5rem;
+}
+
+/* Password hint */
+.passwordHint {
+  display: flex;
+  gap: 0.5rem;
+  color: #ffcc00;
+  font-size: 0.8rem;
+  justify-content: flex-start;
+}
+
+.passwordHint .pwnd {
+  color: red;
+}
+
+/* Update button */
+.updateBtn {
+  background-color: white;
+  color: #15085f;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 0;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}

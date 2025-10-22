@@ -6,6 +6,7 @@ import LoginPage from "./pages/loginPage/LoginPage";
 import SignupPage from "./pages/signupPage/SignupPage";
 import MyStoredPasswords from "./pages/myStoredPasswords/MyStoredPasswords";
 import NewLckdPage from "./pages/newLckdPage/NewLckdPage";
+import EditLckdPage  from "./pages/editLckdPage/EditLckdPage";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/mystoredpasswords" element={<MyStoredPasswords />} />
           <Route path="/newlckd" element={<NewLckdPage />} />
+          <Route path="/editlckd" element={<EditLckdPage />} />
+
         </Routes>
       </BrowserRouter>
     </>
