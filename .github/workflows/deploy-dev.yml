@@ -1,4 +1,4 @@
-name: Frontend Dev Deploy
+name: LCKD Dev Deploy
 
 on:
   push:
