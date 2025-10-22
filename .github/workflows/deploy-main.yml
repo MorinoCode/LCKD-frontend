@@ -1,4 +1,4 @@
-name: Frontend Main Deploy
+name: LCKD Main Deploy
 
 on:
   workflow_run:
