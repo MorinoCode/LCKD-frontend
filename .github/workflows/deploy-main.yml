@@ -2,7 +2,7 @@ name: LCKD Main Deploy
 
 on:
   workflow_run:
-    workflows: ["LCKD Dev Deploy"] 
+    workflows: ["LCKD Dev Deploy"] # Waits for dev workflow
     branches:
       - dev
     types:
@@ -16,9 +16,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout code
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # 2️⃣ Setup Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -26,11 +28,20 @@ jobs:
           cache: 'npm'
           cache-dependency-path: package-lock.json
 
+      # 3️⃣ Install dependencies and build
       - name: Install dependencies & build
         run: |
           npm ci
           npm run build
 
+      # 4️⃣ Debug (optional)
+      - name: Debug environment
+        run: |
+          echo "SOURCE_DIR = $SOURCE_DIR"
+          echo "AWS_S3_BUCKET = $AWS_S3_BUCKET"
+          ls -la dist
+
+      # 5️⃣ Deploy to Production S3
       - name: Deploy to PRODUCTION S3 bucket
         uses: jakejarvis/s3-sync-action@master
         with:
@@ -39,5 +50,5 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.AWS_PROD_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: "eu-north-1"
-          SOURCE_DIR: "dist"
+          AWS_REGION: eu-north-1
+          SOURCE_DIR: dist
