@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: "npm"
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
@@ -31,6 +31,14 @@ jobs:
 
       - name: Build app
         run: npm run build
+
+      - name: Debug environment
+        run: |
+          echo "SOURCE_DIR = $SOURCE_DIR"
+          echo "AWS_S3_BUCKET = $AWS_S3_BUCKET"
+          echo "Listing current directory:"
+          pwd
+          ls -la
 
       - name: Deploy to DEV S3 bucket
         uses: jakejarvis/s3-sync-action@master
