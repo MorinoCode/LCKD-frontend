@@ -42,7 +42,7 @@ jobs:
           ls -la dist
 
       # 5️⃣ Deploy to Production S3
-      - name: Deploy to PRODUCTION S3 bucket
+      - name: Deploy to DEV S3 bucket
         uses: jakejarvis/s3-sync-action@master
         with:
           args: --follow-symlinks --delete
