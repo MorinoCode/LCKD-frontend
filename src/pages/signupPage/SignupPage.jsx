@@ -9,7 +9,7 @@ export default function SignupPage() {
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // ✅ جلوگیری از reload
+    e.preventDefault();
 
     try {
       const res = await fetch("https://lckd-backend-dev.onrender.com/api/auth/signup", {
@@ -18,11 +18,7 @@ export default function SignupPage() {
         body: JSON.stringify({ username, password }),
       });
 
-      // 🧠 گاهی response خالیه (مثلاً 204)، برای اطمینان try-catch بذاریم
-      let data = {};
-      try {
-        data = await res.json();
-      } catch {}
+      const data = await res.json();
 
       if (res.ok) {
         setMessage("✅ Account created successfully!");
@@ -45,14 +41,12 @@ export default function SignupPage() {
         </Link>
       </div>
 
-      {/* لوگو و تیتر */}
       <div className="logoSection">
         <img src={logo} alt="LCKD logo" className="logo" />
         <h1>LCKD</h1>
         <p>CREATE YOUR ACCOUNT</p>
       </div>
 
-      {/* فرم */}
       <form className="signupForm" onSubmit={handleSubmit}>
         <label htmlFor="username">USERNAME</label>
         <input
@@ -61,7 +55,6 @@ export default function SignupPage() {
           placeholder="choose a username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          required
         />
 
         <label htmlFor="password">PASSWORD</label>
@@ -72,7 +65,6 @@ export default function SignupPage() {
             placeholder="enter password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
           />
           <span className="eyeIcon">👁️</span>
         </div>
